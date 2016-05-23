@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="F:\Kartya_Project\automation\bin\Debug\TeacherSherpa.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-05-23" time="17:23:10">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8689" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="F:\Kartya_Project\automation\bin\Debug" machine-name="DELL-PC" user="Dell" user-domain="Dell-Pc" />
+  <culture-info current-culture="en-IN" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="F:\Kartya_Project\automation\bin\Debug\TeacherSherpa.dll" executed="True" result="Failure" success="False" time="33.314" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="TestCases" executed="True" result="Failure" success="False" time="33.314" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="TestSuites" executed="True" result="Failure" success="False" time="33.313" asserts="0">
+            <results>
+              <test-case name="TestCases.TestSuites.T001_Login_001_UserLoginWithValidCredentials" executed="True" result="Error" success="False" time="33.310" asserts="0">
+                <failure>
+                  <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+                  <stack-trace><![CDATA[at Framework.PageObjects.LoginObjects.T001_Login_001_UserLoginWithValidCredentials() in f:\Kartya_Project\automation\Framework\PageObjects\LoginObjects.cs:line 38
+at Framework.PageObjects.LoginObjects.T001_Login_001_UserLoginWithValidCredentials(IWebDriver driver) in f:\Kartya_Project\automation\Framework\PageObjects\LoginObjects.cs:line 26
+at TestCases.Login.T001_Login_001_UserLoginWithValidCredentials() in f:\Kartya_Project\automation\TestCases\Login.cs:line 41
+at TestCases.TestSuites.T001_Login_001_UserLoginWithValidCredentials() in f:\Kartya_Project\automation\TestCases\TestSuites.cs:line 57
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,2 @@
+TestCases.TestSuites.T001_Login_001_UserLoginWithValidCredentials
+TestCases.TestSuites.T002_Login_002_UserLoginUsingRememberMeCheckbox
