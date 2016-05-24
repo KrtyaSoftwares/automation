@@ -13,6 +13,10 @@ using System.Windows.Forms;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 using NUnit.Framework;
+
+using System.Linq;
+using Framework.Init;
+
 namespace Framework.Init
 {
 
@@ -23,6 +27,40 @@ namespace Framework.Init
         protected IWebDriver driver;
         //public string strFactoryName = string.Empty;
 
+        public void LoginWithPaidUser(IWebDriver _driver)
+        {
+            string strEmail = "kalpeshrahir@gmail.com";
+            string strPassword = "Pass#123";
+
+            //new Common(_driver).pause(2000);
+            IWebElement Home_lbl_Login = new Common(_driver).FindElement(By.XPath(ElementLocators.Home_lbl_Login), "'Login' Link on Login Page.", true, 2000);
+            Report.AddToHtmlReport("STEP 2: Click on Login Link.", false, true);
+            Home_lbl_Login.Click();
+
+            _driver.SwitchTo().Window(_driver.WindowHandles.Last());
+            new Common(_driver).pause(5000);
+            IWebElement Home_txt_Email = new Common(_driver).FindElement(By.XPath(ElementLocators.Home_txt_Email), "'Email' TextBox on Login Page.", true, 2000);
+            IWebElement Home_txt_Password = new Common(_driver).FindElement(By.XPath(ElementLocators.Home_txt_Password), "'Password' TextBox on Login Page.", true, 2000);
+            new Common(_driver).pause(2000);
+            IWebElement Home_btn_Login = new Common(_driver).FindElement(By.XPath(ElementLocators.Home_btn_Login), "'Login' Button on Login Page.", true);
+            //new Common(_driver).pause(5000);
+            Report.AddToHtmlReport("STEP 3: Enter Valid 'Email' and 'Password' in TextBox on Login Page.", false, true);
+
+            Common.enterText(Home_txt_Email, strEmail);
+            Common.enterText(Home_txt_Password, strPassword);
+
+            Report.AddToHtmlReport("<br>Data Entered:", false, true, true);
+            Report.AddToHtmlReport("<b>Login Email:</b> " + strEmail, false);
+            Report.AddToHtmlReport("<b>Password: </b> " + strPassword + "<br>", false);
+
+            Report.AddToHtmlReport("STEP 4: Click on 'Login' Button on Login Page.", false, true);
+
+            Home_btn_Login.Click();
+            new Common(_driver).pause(8000);
+            IWebElement Home_lbl_Welcome = new Common(_driver).FindElement(By.XPath(ElementLocators.Home_lbl_Welcome), "'Welcome to TEACHERSHERPA' Label on Home Page.", true);
+
+        
+        }
         public IWebElement FindElementWithDynamic(IWebDriver driver, By elementXpath, string strReportMessage = "")
         {
             IWebElement element = null;

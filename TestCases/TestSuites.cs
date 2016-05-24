@@ -148,8 +148,8 @@ namespace TestCases
                 waitForPrevTestToFinish();
                 IsTestFinished = false;
 
-                Login objLogin = new Login();
-                objLogin.T005_Login_005_VerifyCreateTemplate();
+                Editor objEditor = new Editor();
+                objEditor.T005_Login_005_VerifyCreateTemplate();
             }
             finally
             {
@@ -165,8 +165,204 @@ namespace TestCases
         }
         #endregion
 
-     
-        
+        #region ProfileDetails
+        [Test]
+        public void T006_Login_006_VerifyPinterestUpdate()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                ProfileDetails objProfileDetails = new ProfileDetails();
+                objProfileDetails.T006_Login_006_VerifyPinterestUpdate();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+        [Test]
+        public void T010_Login_010_VerifyTwitterUpdate()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                ProfileDetails objProfile = new ProfileDetails();
+                objProfile.T010_Login_010_VerifyTwitterUpdate();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+
+        [Test]
+        public void T011_Login_011_VerifyFacebookUpdate()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                ProfileDetails objProfile = new ProfileDetails();
+                objProfile.T011_Login_011_VerifyFacebookUpdate();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+
+        [Test]
+        public void T013_Login_013_VerifyLinkedInUpdate()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                ProfileDetails objProfile = new ProfileDetails();
+                objProfile.T013_Login_013_VerifyLinkedInUpdate();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+
+        [Test]
+        public void T016_Login_016_VerifyBookmarkAdded()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                ProfileDetails objProfile = new ProfileDetails();
+                objProfile.T016_Login_016_VerifyBookmarkAdded();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+        #endregion
+
+        #region Editor
+        [Test]
+        public void T007_Login_007_VerifyPrintFunctionality()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                Editor objEditor = new Editor();
+                objEditor.T007_Login_007_VerifyPrintFunctionality();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+
+
+        #endregion
+
+        #region InspirationWall
+        [Test]
+        public void T008_Login_008_VerifyShareFunctionality()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                InspirationWall objInspirationWall = new InspirationWall();
+                objInspirationWall.T008_Login_008_VerifyShareFunctionality();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+
+        [Test]
+        public void T009_Login_009_VerifyBookmarkFunctionality()
+        {
+            try
+            {
+                waitForPrevTestToFinish();
+                IsTestFinished = false;
+
+                InspirationWall objInspirationWall = new InspirationWall();
+                objInspirationWall.T009_Login_009_VerifyBookmarkFunctionality();
+            }
+            finally
+            {
+                Report.AddToHtmlReportFeatureFinish();
+                Report.GenerateHtmlReport();
+                IsTestFinished = true;
+                if (Report.IsFtrPassed == 1) intLoginPassCnt++;
+                else if (Report.IsFtrPassed == 2) intLoginFailCnt++;
+                else if (Report.IsFtrPassed == 3) intLoginWarningCnt++;
+                Login.IsTcAdded = true;
+
+            }
+        }
+        #endregion
         [TestFixtureTearDown]
         public void zzzGenerateSummaryReport()
         {

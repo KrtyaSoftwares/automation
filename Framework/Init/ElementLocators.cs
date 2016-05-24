@@ -38,7 +38,29 @@ namespace Framework.Init
         public static String Editor_btn_MakePublic = "//div[@id='menu_bar']/div[3]/div[contains(.,'MAKE')]";
 
         public static String Home_div_MyWork = "//div[@id='wrapper']/div[2]/div[3]/div/div[3]/div/div/div/div[1]/ng-include/div[contains(.,'My Work')]/div/div[2]/div[1]/div[2]";
-        
+
+        public static String Home_lnk_ProfileDetails = "//a[contains(.,'Profile Details')]";
+        public static String ProfileDetails_txt_Pinterest = "//div[@id='accordion']/div[4]/div[2]/form/div[3]/div/div/input";
+        public static String ProfileDetails_btn_Update = "//div[@id='accordion']/div[4]/div[2]/form/div[6]/button";
+        public static String Editor_btn_Print = "//div[@id='menu_bar']/div[3]/div[3]/div[contains(.,'Print')]";
+
+        public static String Template_btn_Share = "//div[@id='wrapper']/div[2]/div[3]/div[2]/div/div/div/div[1]/div/div[3]/div[2]/i";
+        public static String Share_lbl_Share = "//div[@id='wrapper']/div[2]/div[3]/div[3]/div[2]/div[3]/div[1][contains(.,'Share')]";
+        public static String Share_img_Facebook = "//div[@id='wrapper']/div[2]/div[3]/div[3]/div[2]/div[3]/div[2]/i[2]";
+        public static String Share_img_Twitter = "//div[@id='wrapper']/div[2]/div[3]/div[3]/div[2]/div[3]/div[2]/i[3]";
+        public static String Share_img_Pinterest = "//div[@id='wrapper']/div[2]/div[3]/div[3]/div[2]/div[3]/div[2]/i[4]";
+
+        public static String Home_div_Bookmark = "//div[@id='wrapper']/div[2]/div[3]/div/div[3]/div/div/div/div[1]/ng-include/div[1]/div/div[2]/div[contains(.,'Bookmark')]/div[2]";
+        public static String RecentlyViewed_img_Bookmark = "//div[@id='wrapper']/div[2]/div[3]/div/ng-include/div/div/div[1]/div/div[3]/div[1]/i";
+        public static String Home_img_Logo = "//div[@id='wrapper']/div[2]/div[1]/div[1]/nav/div[1]/div/img";
+        public static String Bookmark_img_Bookmark = "//div[@id='wrapper']/div[2]/div[3]/div/ng-include/div/div/div/div/div[3]/div[1]/i";
+
+        public static String Template_img_Bookmark = "//div[@id='wrapper']/div[2]/div[3]/div[2]/div/div/div/div[1]/div/div[3]/div[1]/i";
+
+        public static String Template_empty_Bookmark = "//div[@id='wrapper']/div[2]/div[3]/div/div[3]/div/div/div/div[1]/ng-include/div[1]/div/div[2]/div[3]/div[3][contains(@ng-if,'== 0')]";
+        public static String ProfileDetails_txt_Twitter = "//div[@id='accordion']/div[4]/div[2]/form/div[1]/div/div/input";
+        public static String ProfileDetails_txt_Facebook = "//div[@id='accordion']/div[4]/div[2]/form/div[2]/div/div/input";
+        public static String ProfileDetails_txt_LinkedIn = "//div[@id='accordion']/div[4]/div[2]/form/div[4]/div/div/input";
         #endregion
 
 

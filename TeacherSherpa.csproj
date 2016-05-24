@@ -96,9 +96,15 @@
     <Compile Include="Framework\Init\ApplicationLogin.cs" />
     <Compile Include="Framework\Init\Report.cs" />
     <Compile Include="Framework\Init\StringMethodExtensions.cs" />
+    <Compile Include="Framework\PageObjects\EditorObjects.cs" />
+    <Compile Include="Framework\PageObjects\InspirationWallObjects.cs" />
     <Compile Include="Framework\PageObjects\LoginObjects.cs" />
+    <Compile Include="Framework\PageObjects\ProfileDetailsObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases\Editor.cs" />
+    <Compile Include="TestCases\InspirationWall.cs" />
     <Compile Include="TestCases\Login.cs" />
+    <Compile Include="TestCases\ProfileDetails.cs" />
     <Compile Include="TestCases\TestSuites.cs" />
   </ItemGroup>
   <ItemGroup>

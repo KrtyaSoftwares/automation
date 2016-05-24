@@ -128,32 +128,7 @@ namespace TestCases
 
        }
 
-       public void T005_Login_005_VerifyCreateTemplate()
-       {
-
-           if (!IsTcAdded)
-           {
-               Report.AddToHtmlReportTCHeader("Login Test Cases");
-               IsTcAdded = true;
-           }
-
-           Report.AddToHtmlReport("TEAC_1005 : To Verify User can Create Template from Editor.", true, false, true);
-
-           Report.AddToHtmlReport("STEP 1: Insert Url in Browser Addressbar.", false, true);
-
-           driver = Browser.OpenWithSelectedBrowser(driver, ProjectUrl, true);
-
-           Framework.PageObjects.LoginObjects objLoginObjects = new Framework.PageObjects.LoginObjects();
-
-           driver = objLoginObjects.T005_Login_005_VerifyCreateTemplate(driver);
-
-           if (Convert.ToInt16(ConfigurationSettings.AppSettings.Get("CloseBrowser")) == 1)
-           {
-               Browser.CloseBrowser(driver);
-
-           }
-
-       }
+       
        }
    }
 
