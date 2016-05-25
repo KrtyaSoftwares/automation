@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="F:\Kartya_Project\automation\bin\Debug\TeacherSherpa.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-05-24" time="16:37:04">
+<test-results name="F:\Kartya_Project\automation\bin\Debug\TeacherSherpa.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-05-25" time="11:21:49">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8689" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="F:\Kartya_Project\automation\bin\Debug" machine-name="DELL-PC" user="Dell" user-domain="Dell-Pc" />
   <culture-info current-culture="en-IN" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="F:\Kartya_Project\automation\bin\Debug\TeacherSherpa.dll" executed="True" result="Success" success="True" time="136.287" asserts="0">
+  <test-suite type="Assembly" name="F:\Kartya_Project\automation\bin\Debug\TeacherSherpa.dll" executed="True" result="Success" success="True" time="114.080" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestCases" executed="True" result="Success" success="True" time="136.269" asserts="0">
+      <test-suite type="Namespace" name="TestCases" executed="True" result="Success" success="True" time="114.066" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="TestSuites" executed="True" result="Success" success="True" time="136.266" asserts="0">
+          <test-suite type="TestFixture" name="TestSuites" executed="True" result="Success" success="True" time="114.063" asserts="0">
             <results>
-              <test-case name="TestCases.TestSuites.T016_Login_016_VerifyBookmarkAdded" executed="True" result="Success" success="True" time="136.246" asserts="0" />
+              <test-case name="TestCases.TestSuites.T014_Login_016_VerifyDescriptionLength" executed="True" result="Success" success="True" time="114.047" asserts="0" />
             </results>
           </test-suite>
         </results>

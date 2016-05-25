@@ -61,6 +61,12 @@ namespace Framework.Init
         public static String ProfileDetails_txt_Twitter = "//div[@id='accordion']/div[4]/div[2]/form/div[1]/div/div/input";
         public static String ProfileDetails_txt_Facebook = "//div[@id='accordion']/div[4]/div[2]/form/div[2]/div/div/input";
         public static String ProfileDetails_txt_LinkedIn = "//div[@id='accordion']/div[4]/div[2]/form/div[4]/div/div/input";
+        public static String ProfileDetails_txt_ProfileName = "//input[@name='profileName']";
+        public static String ProfileDetails_txt_ProfileDescription = "//div[@id='accordion']//..//textarea";
+        public static String ProfileDetails_btn_UpdateProfile = "//button[@id='updateUserBtn']";
+        public static String ProfileDetails_lblmsg_Successfull = "//div[@id='toast']/ul/li/div/span/span";
+
+
         #endregion
 
 

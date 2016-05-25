@@ -125,6 +125,32 @@ namespace TestCases
 
         }
 
+        public void T014_Login_016_VerifyDescriptionLength()
+        {
+
+            if (!IsTcAdded)
+            {
+                Report.AddToHtmlReportTCHeader("Login Test Cases");
+                IsTcAdded = true;
+            }
+
+            Report.AddToHtmlReport("TEAC_1014 : To Verify User can Update Description to more than 500 Characters.", true, false, true);
+
+            Report.AddToHtmlReport("STEP 1: Insert Url in Browser Addressbar.", false, true);
+
+            driver = Browser.OpenWithSelectedBrowser(driver, ProjectUrl, true);
+
+            ProfileDetailsObjects objProfileDetailsObjects = new ProfileDetailsObjects();
+
+            driver = objProfileDetailsObjects.T014_Login_016_VerifyDescriptionLength(driver);
+
+            if (Convert.ToInt16(ConfigurationSettings.AppSettings.Get("CloseBrowser")) == 1)
+            {
+                Browser.CloseBrowser(driver);
+            }
+
+        }
+
         public void T016_Login_016_VerifyBookmarkAdded()
         {
 

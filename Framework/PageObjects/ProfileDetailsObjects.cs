@@ -24,7 +24,7 @@ namespace Framework.PageObjects
         }
         public void T006_Login_006_VerifyPinterestUpdate()
         {
-            
+
             new Common(_driver).LoginWithPaidUser(_driver);
             new Common(_driver).pause(3000);
             Report.AddToHtmlReport("STEP 5: Click on 'Profile Details' Link on Home Page.", false, true);
@@ -60,7 +60,6 @@ namespace Framework.PageObjects
                 Report.AddToHtmlReportPassed("URL Updated Successfully for the input : 'Pinterest'");
             }
         }
-
 
         public IWebDriver T010_Login_010_VerifyTwitterUpdate(IWebDriver driver)
         {
@@ -109,7 +108,6 @@ namespace Framework.PageObjects
                 Report.AddToHtmlReportPassed("URL Updated Successfully for the input : 'twitter'");
             }
         }
-
 
         public IWebDriver T011_Login_011_VerifyFacebookUpdate(IWebDriver driver)
         {
@@ -207,6 +205,66 @@ namespace Framework.PageObjects
             }
         }
 
+        public IWebDriver T014_Login_016_VerifyDescriptionLength(IWebDriver driver)
+        {
+
+            _driver = driver;
+
+            T014_Login_016_VerifyDescriptionLength();
+
+            return _driver;
+        }
+        public void T014_Login_016_VerifyDescriptionLength()
+        {
+            string strProfileName = "QA Test";
+            string strProfileDescription = new Common(_driver).generateRandomString(505);
+
+            new Common(_driver).LoginWithPaidUser(_driver);
+            new Common(_driver).pause(3000);
+            Report.AddToHtmlReport("STEP 5: Click on 'Profile Details' Link on Home Page.", false, true);
+            IWebElement Home_img_Details = new Common(_driver).FindElementClick(By.XPath(ElementLocators.Home_img_Details), "'Details' Image on Home Page.", true, 2000);
+            new Common(_driver).pause(3000);
+
+            IWebElement Home_lnk_ProfileDetails = new Common(_driver).FindElementClick(By.XPath(ElementLocators.Home_lnk_ProfileDetails), "'Profile Details' Link on Home Page.", true, 2000);
+            new Common(_driver).pause(3000);
+
+            Report.AddToHtmlReport("STEP 6: To Update Description with Enter more than 500 characters in Profile Desription Field.", false, true);
+
+            IWebElement ProfileDetails_txt_ProfileName = new Common(_driver).FindElement(By.XPath(ElementLocators.ProfileDetails_txt_ProfileName), "'Profile Name' TextBox on Profile Details Page.", true, 2000);
+            IWebElement ProfileDetails_txt_ProfileDescription = new Common(_driver).FindElement(By.XPath(ElementLocators.ProfileDetails_txt_ProfileDescription), "'Profile Description' Textarea on Profile Details Page.", true, 2000);
+
+            Common.enterText(ProfileDetails_txt_ProfileName, strProfileName);
+            Common.enterText(ProfileDetails_txt_ProfileDescription, strProfileDescription);
+
+            Report.AddToHtmlReport("<br>Data Entered:", false, true, true);
+            Report.AddToHtmlReport("<b>Profile Name:</b> " + strProfileName, false);
+            Report.AddToHtmlReport("<b>Profile Description(Enter more than 500 characters):</b> " + strProfileDescription, false);
+            Report.AddToHtmlReport("<br><b>Verify Length of Profile Description:</b> " + strProfileDescription.Length + "<br>", false);
+
+            Report.AddToHtmlReport("STEP 7: Click on 'UPDATE' Button.", false, true);
+            IWebElement ProfileDetails_btn_UpdateProfile = new Common(_driver).FindElementClick(By.XPath(ElementLocators.ProfileDetails_btn_UpdateProfile), "'UPDATE' Button on Profile Details Page.", true, 2000);
+            new Common(_driver).pause(3000);
+
+            IWebElement ProfileDetails_lblmsg_Successfull = new Common(_driver).FindElementClick(By.XPath(ElementLocators.ProfileDetails_lblmsg_Successfull));
+            Report.AddToHtmlReportPassed("'" + ProfileDetails_lblmsg_Successfull.Text + "' message text verification of Profile Detailss Page.");
+
+            string strLengthDesc = ProfileDetails_txt_ProfileDescription.GetAttribute("maxlength");
+            Report.AddToHtmlReport("<br><b>Verify Length after Update Profile Description:</b> " + strLengthDesc, false);
+
+
+            //IWebElement ProfileDetails_txt_LinkedIn1 = new Common(_driver).FindElement(By.XPath(ElementLocators.ProfileDetails_txt_LinkedIn), "'LinkedIn' TextBox on Profile Details Page.", true, 2000);
+            //string strLinkedIn1 = new Common(_driver).ElementGetText(ProfileDetails_txt_LinkedIn1);
+
+            //if (strLinkedIn1.Trim() == strLinkedIn.Trim())
+            //{
+            //    Exception ex = new Exception();
+            //    Report.AddToHtmlReportFailed(_driver, ex, "URL Updated Successfully for the input : 'LinkedIn'");
+            //}
+            //else
+            //{
+            //    Report.AddToHtmlReportPassed("URL Updated Successfully for the input : 'LinkedIn'");
+            //}
+        }
 
         public IWebDriver T016_Login_016_VerifyBookmarkAdded(IWebDriver driver)
         {
@@ -244,7 +302,7 @@ namespace Framework.PageObjects
             Report.AddToHtmlReport("STEP 9: Verify Template.", false, true);
             IWebElement Bookmark_img_Bookmark = new Common(_driver).FindElement(By.XPath(ElementLocators.Bookmark_img_Bookmark), " Template available on Bookmark Page.", true, 2000);
 
-           
+
         }
     }
 }
